@@ -1,0 +1,60 @@
+// not-found.component.scss
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.error-template {
+  text-align: center;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+h1 {
+  color: #ff4040;
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.error-details {
+  color: #ff4040;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.error-actions {
+  margin-top: 30px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  border-radius: 3px;
+  padding: 10px 20px;
+  margin-right: 10px;
+}
+
+.btn-default {
+  background-color: #ccc;
+  color: #333;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.btn {
+  font-size: 24px;
+  border: none;
+  border-radius: 3px;
+  text-decoration: none;
+}

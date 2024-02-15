@@ -1,0 +1,66 @@
+// header.component.scss
+.navbar {
+  background-color: #383838;
+  padding: 15px 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 5rem;
+  padding-right: 2rem;
+}
+
+.navbar-brand {
+  font-size: 28px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #007bff;
+}
+
+.navbar-nav {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-link {
+  margin-right: 20px;
+  font-size: large;
+  color: #787878;
+  text-decoration: none;
+}
+
+.nav-item.active a {
+  color: #000000;
+  font-weight: bold;
+}
+a:hover {
+  color: #007bff;
+}
+.btn-primary.nav-item a {
+  display: flex;
+  justify-content: center;
+  font-size: medium;
+  background-color: #007bff;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.btn-primary.nav-item a:hover {
+  background-color: #c82333;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding-left: 2rem;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+  }
+}

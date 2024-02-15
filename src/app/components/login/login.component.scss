@@ -1,0 +1,144 @@
+// login.component.css
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-card {
+  width: 350px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  text-align: center;
+  padding: 20px;
+}
+
+.icon {
+  width: 200px;
+  height: 200px;
+}
+
+h2 {
+  margin-top: 10px;
+}
+
+p {
+  color: lightslategray;
+  text-align: center;
+  margin: 10px 0;
+}
+
+form {
+  padding: 20px 0;
+}
+
+.form-group {
+  margin: 10px 20px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.btn-primary {
+  width: 80%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.card-footer {
+  background-color: transparent !important;
+  text-align: right;
+  padding: 10px 20px;
+}
+
+small a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+// not-found.component.scss
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.error-template {
+  text-align: center;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+h1 {
+  color: #ff4040;
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.error-details {
+  color: #ff4040;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.error-actions {
+  margin-top: 30px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  border-radius: 3px;
+  padding: 10px 20px;
+  margin-right: 10px;
+}
+
+.btn-default {
+  background-color: #ccc;
+  color: #333;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.btn {
+  font-size: 24px;
+  border: none;
+  border-radius: 3px;
+  text-decoration: none;
+}

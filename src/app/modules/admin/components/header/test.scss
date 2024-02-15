@@ -1,0 +1,61 @@
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators, FormArray } from '@angular/forms';
+
+@Component({
+  selector: 'app-dynamic-form',
+  templateUrl: './dynamic-form.component.html',
+})
+export class DynamicFormComponent {
+  myForm: FormGroup;
+
+  constructor(private fb: FormBuilder) {
+    this.myForm = this.fb.group({
+      emails: this.fb.array([this.createEmailControl()]),
+    });
+  }
+
+  // Create a new email form control
+  createEmailControl(): FormGroup {
+    return this.fb.group({
+      email: ['', [Validators.required, Validators.email]],
+    });
+  }
+
+  // Add a new email input field
+  addEmailField(): void {
+    const emailArray = this.myForm.get('emails') as FormArray;
+    emailArray.push(this.createEmailControl());
+  }
+
+  // Remove an email input field
+  removeEmailField(index: number): void {
+    const emailArray = this.myForm.get('emails') as FormArray;
+    emailArray.removeAt(index);
+  }
+
+  // Handle form submission
+  onSubmit() {
+    if (this.myForm.valid) {
+      console.log('Form data:', this.myForm.value);
+      // Perform your data submission logic here
+    }
+  }
+}
+
+
+
+
+
+
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+  <div formArrayName="emails">
+    <div *ngFor="let emailControl of myForm.get('emails').controls; let i = index">
+      <div [formGroupName]="i">
+        <input type="email" formControlName="email" placeholder="Email">
+        <button type="button" (click)="removeEmailField(i)">Remove</button>
+      </div>
+    </div>
+  </div>
+  <button type="button" (click)="addEmailField()">Add Email</button>
+  <button type="submit">Submit</button>
+</form>

@@ -1,0 +1,70 @@
+/* Style the footer */
+.footer {
+  background-color: #383838; /* Background color */
+  color: #787878; /* Text color */
+  padding: 40px 0; /* Add padding to the top and bottom */
+  font-size: 14px; /* Adjust font size */
+}
+.row {
+  padding: 0px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Style the copyright section */
+.copyright {
+  text-align: center;
+}
+
+/* Style the copyright text */
+.rights span {
+  font-weight: bold; /* Make it bold */
+}
+
+.rights{
+    display: flex;
+    align-items: center;
+}
+
+/* Style the copyright menu */
+.copyright-menu ul {
+  list-style: none; /* Remove bullets */
+  padding: 0; /* Remove default padding */
+}
+
+.copyright-menu li {
+  display: inline;
+  margin-right: 15px; /* Adjust spacing between menu items */
+}
+
+.copyright-menu a {
+  text-decoration: none; /* Remove underlines */
+  color: #787878; /* Text color */
+}
+
+/* Style the copyright menu links on hover */
+.copyright-menu a:hover {
+  color: #007bff;
+  text-decoration: underline; /* Add underline on hover */
+}
+
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+@media screen and (max-width: 768px) {
+  .copyright-menu li {
+    display: flex;
+    flex-direction: column;
+  }
+  .rights {
+    align-items: center;
+    max-width: 300px;
+  }
+   .navbar-nav {
+    flex-direction: column;
+  }
+}

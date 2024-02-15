@@ -1,0 +1,44 @@
+<!-- login.component.html -->
+<div class="container">
+  <div class="row">
+    <div class="login-card">
+      <div class="card-body">
+        <div class="text-center">
+          <img src="../../../assets/Login.png" class="icon" />
+        </div>
+        <div class="text-center">
+          <h2>Welcome</h2>
+        </div>
+        <p style="color: lightslategray; text-align: center">
+          Please enter your login details
+        </p>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <input
+              type="email"
+              placeholder="Email"
+              class="form-control"
+              formControlName="email"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="password"
+              placeholder="Password"
+              class="form-control"
+              formControlName="password"
+            />
+          </div>
+          <input type="submit" class="btn btn-primary" value="Login" name="" />
+        </form>
+      </div>
+      <div class="card-footer text-right">
+        <small><a routerLink="/forgot-password">Forgot Password</a></small>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
