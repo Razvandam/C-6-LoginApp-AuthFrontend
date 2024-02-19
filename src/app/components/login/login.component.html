@@ -10,13 +10,14 @@
           <h2>Welcome</h2>
         </div>
         <p style="color: lightslategray; text-align: center">
-          Please enter your login details
+          Please enter the placeholder data from below to login into the app
+          <!-- Please enter your login details -->
         </p>
         <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
           <div class="form-group">
             <input
               type="email"
-              placeholder="Email"
+              placeholder="admin@admin.com"
               class="form-control"
               formControlName="email"
             />
@@ -24,7 +25,7 @@
           <div class="form-group">
             <input
               type="password"
-              placeholder="Password"
+              placeholder="123"
               class="form-control"
               formControlName="password"
             />
@@ -38,7 +39,3 @@
     </div>
   </div>
 </div>
-
-
-
-
