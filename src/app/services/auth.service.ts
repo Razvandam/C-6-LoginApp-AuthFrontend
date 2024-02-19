@@ -26,36 +26,32 @@ export class AuthService {
     this.router.navigate(['login']);
   }
 
-  // login({ email, password }: any): Observable<any> {
-  //   if (email === 'admin@admin.com' && password === '123') {
-  //     this.setToken('abcdefghijklmnopqrstuvwxyz');
-  //     return of({ name: 'Admin RAVDatum', email: 'admin@admin.com' });
-  //   }
-  //   const err = new Error('Failed to login');
-  //   return throwError(() => err);
-  // }
+  // Comment this login function and uncomment the login function from below
+  // In the return statement of the login function add the backend login endpoint you want to connect to
+  // Also uncomment the getAccessClaims function that will enable you to decode the Bearer token that comes from the Backend
+  login({ email, password }: any): Observable<any> {
+    if (email === 'admin@admin.com' && password === '123') {
+      this.setToken('abcdefghijklmnopqrstuvwxyz');
+      return of({ name: 'Admin RAVDatum', email: 'admin@admin.com' });
+    }
+    const err = new Error('Failed to login');
+    return throwError(() => err);
+  }
 
-  // login({ email, password }: any): Observable<any> {
-  //   return this.http.post('https://api.example.com/endpoint', {
+  // login(email: string, password: string): Observable<any> {
+  //   const credentials: { email: string; password: string } = {
   //     email: email,
   //     password: password,
-  //   });
+  //   };
+  //   return this.http.post('https://api.example.com/endpoint', credentials);
   // }
 
-  login(email: string, password: string): Observable<any> {
-    const credentials: { email: string; password: string } = {
-      email: email,
-      password: password,
-    };
-    return this.http.post('https://api.example.com/endpoint', credentials);
-  }
-
-  getAccessClaims(): any {
-    const encodedToken = this.getToken()!.split('.');
-    const decodedPayload = Buffer.from(encodedToken[1], 'base64').toString(
-      'utf-8'
-    );
-    const payload = JSON.parse(decodedPayload);
-    return payload;
-  }
+  // getAccessClaims(): any {
+  //   const encodedToken = this.getToken()!.split('.');
+  //   const decodedPayload = Buffer.from(encodedToken[1], 'base64').toString(
+  //     'utf-8'
+  //   );
+  //   const payload = JSON.parse(decodedPayload);
+  //   return payload;
+  // }
 }

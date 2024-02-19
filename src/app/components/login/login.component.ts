@@ -25,34 +25,34 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  // onSubmit() {
-  //   // console.log(this.loginForm.value)
-  //   if (this.loginForm.valid) {
-  //     this.authService.login(this.loginForm.value).subscribe(
-  //       (next) => {
-  //         this.router.navigate(['admin']);
-  //       },
-  //       (err: Error) => {
-  //         alert(err.message);
-  //       }
-  //     );
-  //     this.loginForm.value.email = '';
-  //     this.loginForm.value.password = '';
-  //   }
-  // }
-
+  // Comment this part and use the onSubmit() function from below if you want to connect  to a Backend Server
   onSubmit() {
     // console.log(this.loginForm.value)
     if (this.loginForm.valid) {
-      console.log(this.loginForm.value.email);
-      this.authService
-        .login(this.loginForm.value.email!, this.loginForm.value.password!)
-        .subscribe((response) => {
-          localStorage.setItem('token', response); //JSON.stringify(response)
+      this.authService.login(this.loginForm.value).subscribe(
+        (next) => {
           this.router.navigate(['admin']);
-        });
+        },
+        (err: Error) => {
+          alert(err.message);
+        }
+      );
       this.loginForm.value.email = '';
       this.loginForm.value.password = '';
     }
   }
+
+  // onSubmit() {
+  //   if (this.loginForm.valid) {
+  //     console.log(this.loginForm.value.email);
+  //     this.authService
+  //       .login(this.loginForm.value.email!, this.loginForm.value.password!)
+  //       .subscribe((response) => {
+  //         localStorage.setItem('token', response); //JSON.stringify(response)
+  //         this.router.navigate(['admin']);
+  //       });
+  //     this.loginForm.value.email = '';
+  //     this.loginForm.value.password = '';
+  //   }
+  // }
 }
